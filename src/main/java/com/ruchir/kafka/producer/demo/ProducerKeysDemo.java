@@ -1,4 +1,4 @@
-package com.ruchir.kafka.demo;
+package com.ruchir.kafka.producer.demo;
 
 import java.util.Properties;
 
@@ -15,7 +15,7 @@ public class ProducerKeysDemo {
     public static void main(String[] args) {
 
         // Creating logger for class
-        final Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallback.class);
+        final Logger logger = LoggerFactory.getLogger(ProducerKeysDemo.class);
 
         // Create producer properties
         Properties properties = new Properties();
@@ -65,6 +65,12 @@ public class ProducerKeysDemo {
 
                 }
             });
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
         // Flush data
         kafkaProducer.flush();

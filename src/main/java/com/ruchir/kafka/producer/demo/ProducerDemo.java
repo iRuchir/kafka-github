@@ -1,4 +1,4 @@
-package com.ruchir.kafka.demo;
+package com.ruchir.kafka.producer.demo;
 
 import java.util.Properties;
 
